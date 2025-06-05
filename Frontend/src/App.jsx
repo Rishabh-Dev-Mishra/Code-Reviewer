@@ -24,7 +24,7 @@ function App() {
     setReview("Analyzing your code...");
 
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code }); // Updated port
+      const response = await axios.post("https://code-reviewer-x41h.onrender.com/ai/get-review", { code }); // Updated port
       setReview(response.data.review);
     } catch (err) {
       console.error("❌ Error fetching review:", err);
